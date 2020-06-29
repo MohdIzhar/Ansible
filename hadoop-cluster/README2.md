@@ -16,10 +16,9 @@ must pass ssh to all nodes to avoid errors from each others too (from master to 
 -> ./start_service.sh                  => to start service of all nodes
 -> ./stop_service.sh                   => to stop service of all nodes
 
-# ansible all -a jps     => run this to check status of all nodes if their default name apperas then                            it means confiuration is right else troubleshoot the setup
+# ansible all -a jps     => run this to check status of all nodes if their default name apperas then it means confiuration is right else troubleshoot the setup
 # Go to client 
--> hadoop dfsadmin -report  (will show the status of active or dead datanodes) 
-also check the status in safemode
+-> hadoop dfsadmin -report  (will show the status of active or dead datanodes) also check the status in safemode
 
 # http://masterip:50070  (to check the cluster status on browser)
 # http://jobtrackerip:50030  (to check the map reduce cluster status on browser)
