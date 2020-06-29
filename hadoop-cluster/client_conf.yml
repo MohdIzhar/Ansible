@@ -1,0 +1,8 @@
+- hosts: clients
+  tasks:
+        - copy:
+            src: "/home/hadoop_cluster/core-site.xml"
+            dest: "/etc/hadoop/"
+            owner: "root"
+            group: "root"
+            mode: "0644"

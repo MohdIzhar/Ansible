@@ -1,0 +1,28 @@
+- hosts: masters
+  tasks:
+        - file:
+            path: "/namenode"
+            state: "directory"
+       
+        - copy:
+            src: "/home/hadoop_cluster/hdfs-site_namenode.xml"
+            dest: "/etc/hadoop/hdfs-site.xml"
+            owner: "root"
+            group: "root"
+            mode: "0644"
+      
+        - template:
+            src: "/home/hadoop_cluster/core-site.xml.sample"
+            dest: "/etc/hadoop/core-site.xml"
+            owner: "root"
+            group: "root"
+            mode: "0644"
+
+        - copy:
+            src: "/etc/hadoop/core-site.xml"
+            dest: "/home/hadoop_cluster/core-site.xml"
+            owner: "root"
+            group: "root"
+            mode: "0644"
+
+            

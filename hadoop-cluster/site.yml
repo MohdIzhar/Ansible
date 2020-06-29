@@ -1,0 +1,6 @@
+- import_playbook: setup.yml
+- import_playbook: master_conf.yml
+- import_playbook: datanodes_conf.yml
+- import_playbook: jobtracker_conf.yml
+- import_playbook: tasktracker_conf.yml
+- import_playbook: client_conf.yml

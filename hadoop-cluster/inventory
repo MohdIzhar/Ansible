@@ -1,0 +1,19 @@
+[masters]
+master ansible_user=xyz ansible_password=abc
+
+[datanodes]
+datanode1 ansible_user=xyz ansible_password=abc
+datanode2 ansible_user=xyz ansible_password=abc
+datanode3 ansible_user=xyz ansible_password=abc
+
+[jobtrackers]
+jobtracker ansible_user=xyz ansible_password=abc
+
+
+[tasktrackers]
+tasktracker1 ansible_user=xyz ansible_password=abc
+tasktracker2 ansible_user=xyz ansible_password=abc
+
+[clients]
+client ansible_user=xyz ansible_password=abc
+

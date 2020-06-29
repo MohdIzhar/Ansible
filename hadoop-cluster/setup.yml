@@ -1,0 +1,36 @@
+- hosts: all
+  tasks: 
+       - name: "Extracting java packages"
+         copy: 
+             src: "/root/jdk-8u171-linux-x64.rpm"
+             dest: "/root/"
+
+       - command: "rpm -ivh /root/jdk-8u171-linux-x64.rpm"
+         register: "x"
+         ignore_errors: yes
+
+       - debug:
+            msg: "{{ x }}"
+               
+       - name: "Java home path setup"
+         lineinfile:    
+             dest: "/root/.bashrc"
+             line: "export JAVA_HOME=/usr/java/jdk1.8.0_171-amd64/"
+
+       - name: "Path setup"
+         lineinfile:
+             dest: "/root/.bashrc"
+             line: "export PATH=/usr/java/jdk1.8.0_171-amd64/bin:$PATH"
+
+       - name: "Extracting hadoop packages"
+         copy:
+             src:  "/root/hadoop-1.2.1-1.x86_64.rpm"
+             dest: "/root/"
+
+       - command: "rpm -ivh /root/hadoop-1.2.1-1.x86_64.rpm --force"
+         register: "y"
+         ignore_errors: yes
+
+       - debug:
+             msg: "{{ y  }}"
+

@@ -1,0 +1,19 @@
+- hosts: jobtrackers
+  tasks:
+      - template:
+            src: "/home/hadoop_cluster/mapred-site.xml"
+            dest: "/etc/hadoop/mapred-site.xml"
+            owner: "root"
+            group: "root"
+            mode: "0644"
+
+
+      - copy:
+            src: "/home/hadoop_cluster/core-site.xml"
+            dest: "/etc/hadoop/core-site.xml"
+            owner: "root"
+            group: "root"
+            mode: "0644"
+
+
+

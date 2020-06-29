@@ -1,0 +1,11 @@
+- hosts: tasktrackers
+  tasks:
+      - copy:
+            src: "/home/hadoop_cluster/mapred-site.xml.tasktrackers"
+            dest: "/etc/hadoop/mapred-site.xml"
+            owner: "root"
+            group: "root"
+            mode: "0644"
+
+
+
